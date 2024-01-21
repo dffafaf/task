@@ -1,0 +1,374 @@
+/* SITE COLORS
+    PRIMARY COLOR: #FF5400
+    TEXT COLOR: #424247
+*/
+
+/* COMMON STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease-in-out;
+}
+main {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.btn-primary {
+  background-color: #ff5400;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.btn-primary:hover {
+  background-color: #c04000;
+}
+
+section {
+  padding: 3rem 0;
+}
+/* COMMON STYLES END */
+
+/* NAVIGATION AREA START */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  max-width: 1170px;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  color: #424247;
+  font-weight: 500;
+}
+nav ul li:hover {
+  color: #ff5400;
+}
+.menu-icon {
+  display: none;
+}
+
+/* NAVIGATION AREA END */
+
+/* BANNER AREA START */
+#banner {
+  background: url("../imgs/img\ \(3\).jpeg") no-repeat center center/cover;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+#banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.8), transparent);
+  border-radius: 1rem;
+  z-index: -1;
+}
+
+#banner h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+#banner p {
+  max-width: 50%;
+  text-align: center;
+}
+
+#banner form {
+  color: #424247;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+#banner form input,
+#banner form select {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 150px;
+  font-size: 1rem;
+  color: #424247;
+}
+/* BANNER AREA END */
+
+/* POPULAR AREA START */
+#popular {
+  display: flex;
+  gap: 2rem;
+}
+#popular .popular-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+#popular .popular-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#popular .popular-content p,
+#popular .popular-content ul {
+  color: #424247;
+}
+#popular ul {
+  padding: 1rem 2rem;
+}
+/* POPULAR AREA END */
+
+/* DESTINATION AREA START */
+#destination {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+#destination h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#destination p {
+  color: #424247;
+  max-width: 50%;
+  text-align: center;
+}
+
+#destination .destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+#destination .destination-grid > div {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: 220px;
+}
+/* overlay div  */
+#destination .destination-grid > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+/* center the heading  */
+#destination .destination-grid > div > h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  z-index: 3;
+}
+#destination .destination-grid > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* DESTINATION AREA END */
+
+/* WHY CHOOSE AREA START */
+#why-choose {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+#why-choose h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+#why-choose > p {
+  color: #424247;
+  max-width: 50%;
+  text-align: center;
+}
+#why-choose .why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  gap: 2rem;
+}
+#why-choose .why-choose-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5rem;
+  background-color: #f4fdff;
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 250px;
+}
+#why-choose .why-choose-grid > div:first-child,
+#why-choose .why-choose-grid > div:last-child {
+  background-color: #fffbf7;
+}
+#why-choose .why-choose-grid > div > h3 {
+  font-weight: 700;
+}
+#why-choose .why-choose-grid > div > p {
+  color: #424247;
+  text-align: start;
+  width: 100%;
+}
+/* WHY CHOOSE AREA START */
+
+/* FOOTER AREA START */
+footer {
+  background-color: #f3f3f3;
+  color: #424247;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+footer p {
+  max-width: 50%;
+  text-align: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #d8d8d8;
+}
+footer ul li {
+  list-style: none;
+}
+/* FOOTER AREA END */
+
+/* ============= Responsive CSS ============= */
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 1rem;
+  }
+
+  /* nav responsive */
+  nav {
+    padding: 1rem;
+    margin: 0;
+    align-items: center;
+  }
+  nav .logo {
+    width: 60%;
+  }
+  nav ul {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    height: 1rem;
+  }
+
+  /* banner responsive */
+  #banner h1 {
+    font-size: 2rem;
+  }
+  #banner p {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+  #banner form {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 80%;
+  }
+  #banner form input,
+  #banner form select,
+  #banner form button {
+    width: 100%;
+    padding: 0.5rem 0;
+    text-indent: 0.4rem;
+  }
+  #popular {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #popular .popular-content h2,
+  #popular .popular-content p {
+    width: 100%;
+    text-align: center;
+  }
+  #popular img {
+    width: 100%;
+  }
+  #popular .popular-content {
+    text-align: center;
+  }
+
+  #destination .destination-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #destination .destination-grid > div {
+    height: 200px;
+  }
+  #destination .destination-grid > div > h3 {
+    font-size: 1rem;
+  }
+  #why-choose .why-choose-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #why-choose .why-choose-grid > div {
+    height: 200px;
+  }
+  #why-choose .why-choose-grid > div > h3 {
+    font-size: 1rem;
+  }
+  #why-choose .why-choose-grid > div > p {
+    font-size: 0.9rem;
+  }
+}
